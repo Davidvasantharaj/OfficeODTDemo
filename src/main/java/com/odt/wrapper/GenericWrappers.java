@@ -68,7 +68,7 @@ public class GenericWrappers {
 			if(browser.equalsIgnoreCase("chrome"))
 			{
 
-				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+				System.setProperty("webdriver.chrome.driver", "./Dependencies/chromedriver");
 				driver = new ChromeDriver();
 		
 			//driver = new RemoteWebDriver(new URL("http://"+sHubUrl+":"+sHubPort+"/wd/hub"), dc);
@@ -119,6 +119,7 @@ public class GenericWrappers {
 		return bReturn;
 	}
 	
+	
 	/**
 	 * This method will enter the value to the text field using xpath attribute to locate
 	 * 
@@ -129,15 +130,18 @@ public class GenericWrappers {
 	 * @throws COSVisitorException 
 	 */
 	
-	public boolean enterByXpath(String xpathValue, String data) {
+	public boolean enterByXpath(WebElement xpathValue, String data) {
 		boolean bReturn = false;
 		try {
-			driver.findElement(By.xpath(xpathValue)).clear();
-			driver.findElement(By.xpath(xpathValue)).sendKeys(data);	
+			System.out.println("Xpath : "+xpathValue);
+			System.out.println("Data : "+data);
+			xpathValue.clear();
+			xpathValue.sendKeys(data);	
 			Reporter.reportStep("The data: "+data+" entered successfully in field :"+xpathValue, "PASS");
 			bReturn = true;
 
 		} catch (Exception e) {
+			System.err.println("Exception : "+e.getMessage());
 			Reporter.reportStep("The data: "+data+" could not be entered in the field :"+xpathValue, "FAIL");
 		}
 		return bReturn;

@@ -24,6 +24,7 @@ import org.testng.xml.XmlTest;
 
 import com.odt.wrapper.ApplicationWarppers;
 
+
 public class XmlGenerator extends ApplicationWarppers{
 
 	private static XmlSuite suite;
@@ -37,23 +38,40 @@ public class XmlGenerator extends ApplicationWarppers{
 
 	private static String basepkg = "com.odt.testcases";
 
-	public static void main(String[] args) {
-		
-		System.out.println("In XMLgenClass");
+//	public static void main(String[] args) {
+//		
+//		System.out.println("**************In XMLgenClass Main***************");
+//		xmlInit();
+//		new XmlGenerator().scanExcel();
+//		suiteGen();
+//		String xml = getXML();
+//		writeToXML(xml);
+//
+//	}
+	
+	
+	
+	public void XmlGeneratorclass()
+	{
+		System.out.println("**************In XMLgenClass***************");
 		xmlInit();
 		new XmlGenerator().scanExcel();
 		suiteGen();
 		String xml = getXML();
+		
+		System.out.println("Output of getXML : "+xml);
 		writeToXML(xml);
-
 	}
 
 	private static void xmlInit() {
+		
+		
 		suite = new XmlSuite();
 		suite.setName("API Suite");
 		test = new XmlTest(suite);
 		test.setName("API Test");
 		xmlClassesList = new ArrayList<XmlClass>();
+		System.out.println("XMLInit Method executed");
 	}
 
 	/*private static void suiteGen() {
@@ -96,6 +114,9 @@ public class XmlGenerator extends ApplicationWarppers{
 		}
 		test.setXmlClasses(xmlClassesList);
 		//		System.out.println(test);
+		
+		
+		System.out.println("suiteGen Method executed");
 	}
 
 
@@ -108,9 +129,14 @@ public class XmlGenerator extends ApplicationWarppers{
 	private static void writeToXML(String xml) {
 		// System.out.println(xml);
 		String path = System.getProperty("user.dir");
-		try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path +"\\.xml"), "utf-8"))) {
+		
+		System.out.println("Path from writeToXML method : "+path);
+		try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path +"\\.xml"), "utf-8"))) 
+		{
 			writer.write(xml);
-		} catch (IOException e) {
+			System.out.println("Write to XML method completed");
+		} 
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -122,16 +148,25 @@ public class XmlGenerator extends ApplicationWarppers{
 		System.out.println("The file name is " +filename);
 		Workbook wb;		
 		try {
-			wb = WorkbookFactory.create(new FileInputStream(filename));
+			System.out.println("In TRY");
+			wb = WorkbookFactory.create(new FileInputStream("./TestData/"+filename+".xlsx"));
 			Sheet sheet = wb.getSheetAt(0);
-			rowloop: for (Row row : sheet) {
+			
+			rowloop: for (Row row : sheet) 
+			{
 
+				System.out.println("Inside for Loop");
+				
 				Cell cell2 = row.getCell(2);
-				if (cell2 == null) {
+				System.out.println("Cell2 before IF-CONDITION : "+cell2);
+				if (cell2 == null) 
+				{
 					break rowloop;
 				}
 
 				String strToRun = cell2.getStringCellValue();
+				
+				System.out.println("Cell2 value : "+strToRun);
 				if("Run".equalsIgnoreCase(strToRun) || "No".equalsIgnoreCase(strToRun)){
 					continue;
 				}				

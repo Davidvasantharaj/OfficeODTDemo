@@ -20,6 +20,9 @@ public class UI_Validation_Testcases extends ApplicationWarppers
 	@Test(dataProvider="fetchTestData")
 	public void facebook_Login_TC001(String userName, String passWord)
 	{	
+		
+		System.out.println("UserName : "+userName);
+		System.out.println("Password : "+passWord);
 		new Facebook_login_page()
 		.enterUserName(userName)
 		.enterPassword(passWord)

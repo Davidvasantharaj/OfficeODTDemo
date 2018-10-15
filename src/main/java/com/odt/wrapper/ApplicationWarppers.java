@@ -20,6 +20,7 @@ import org.testng.annotations.DataProvider;
 
 import com.odt.utils.DataInputProvider;
 import com.odt.utils.Reporter;
+import com.odt.utils.XmlGenerator;
 
 
 
@@ -41,6 +42,8 @@ public class ApplicationWarppers extends GenericWrappers{
 	
 	@BeforeSuite
 	public void beforeSuite() throws FileNotFoundException, IOException{
+		
+		new XmlGenerator().XmlGeneratorclass();
 		Reporter.startResult();
 		loadObjects();
 	}
