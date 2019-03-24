@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	<test thread-count="5" name="Test">
-		<classes>
-			<class name="com.odt.testcases.UI_Validation_Testcases">
-				<methods>
-					<include name="facebook_Login_TC001">
-						<parameter name="Env" value="prod" />
-					</include>
-				</methods>
-			</class>
-		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+<suite name="API Suite">
+  <test thread-count="5" name="API Test">
+    <classes>
+      <class name="com.odt.testcases.UI_Validation_Testcases">
+        <methods>
+          <include name="Demo_TC_TC003">
+            <parameter name="Env" value="Prod"/>
+          </include> <!-- Demo_TC_TC003 -->
+          <include name="facebook_Login_TC002">
+            <parameter name="Env" value="Prod"/>
+          </include> <!-- facebook_Login_TC002 -->
+        </methods>
+      </class> <!-- com.odt.testcases.UI_Validation_Testcases -->
+    </classes>
+  </test> <!-- API Test -->
+</suite> <!-- API Suite -->

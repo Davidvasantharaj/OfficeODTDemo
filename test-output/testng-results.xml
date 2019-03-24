@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="110603" started-at="2018-10-23T03:13:54Z" finished-at="2018-10-23T03:15:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="110603" started-at="2018-10-23T03:13:54Z" finished-at="2018-10-23T03:15:44Z">
+      <class name="com.odt.testcases.UI_Validation_Testcases">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="beforeSuite" is-config="true" duration-ms="1642" started-at="2018-10-23T08:43:52Z" finished-at="2018-10-23T08:43:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-10-23T08:43:54Z" finished-at="2018-10-23T08:43:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="beforeMethod" is-config="true" duration-ms="4952" started-at="2018-10-23T08:43:54Z" finished-at="2018-10-23T08:43:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="facebook_Login_TC001(java.lang.String, java.lang.String)[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="facebook_Login_TC001" duration-ms="49179" started-at="2018-10-23T08:43:59Z" data-provider="fetchTestData" finished-at="2018-10-23T08:44:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tonystark@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tony56432]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- facebook_Login_TC001 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="afterMethod" is-config="true" duration-ms="113" started-at="2018-10-23T08:44:48Z" finished-at="2018-10-23T08:44:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="beforeMethod" is-config="true" duration-ms="4938" started-at="2018-10-23T08:44:48Z" finished-at="2018-10-23T08:44:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="facebook_Login_TC002(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="facebook_Login_TC002" duration-ms="51116" started-at="2018-10-23T08:44:53Z" data-provider="fetchTestData" finished-at="2018-10-23T08:45:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tonystark@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tony56432]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[David]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- facebook_Login_TC002 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="afterMethod" is-config="true" duration-ms="98" started-at="2018-10-23T08:45:44Z" finished-at="2018-10-23T08:45:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="afterTest" is-config="true" duration-ms="0" started-at="2018-10-23T08:45:44Z" finished-at="2018-10-23T08:45:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.odt.testcases.UI_Validation_Testcases@4516af24]" name="afterSuite" is-config="true" duration-ms="441" started-at="2018-10-23T08:45:44Z" finished-at="2018-10-23T08:45:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.odt.testcases.UI_Validation_Testcases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

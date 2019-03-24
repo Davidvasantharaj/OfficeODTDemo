@@ -4,9 +4,15 @@
   <artifactId>DemoOfficeProjectHCL</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <properties>
+ <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+  
   
   
   <build>
+  
 		<plugins>
 		
 		
@@ -69,10 +75,20 @@
 	
   
   <dependencies>
+  
+  
+  <dependency> 
+  <groupId>com.apple</groupId> 
+  <artifactId>AppleJavaExtensions</artifactId> 
+  <version>1.4</version> 
+  </dependency>
+  
+  
+  
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.14.0</version>
+			<version>3.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -119,6 +135,16 @@
 			<artifactId>commons-configuration</artifactId>
 			<version>1.6</version>
 		</dependency>
+		
+
+				
+  <dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.8</version>
+    <type>jar</type>
+  </dependency>
+  
 
 
 	</dependencies>

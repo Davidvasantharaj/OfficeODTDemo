@@ -73,7 +73,7 @@ public class GenericWrappers {
 		
 			//driver = new RemoteWebDriver(new URL("http://"+sHubUrl+":"+sHubPort+"/wd/hub"), dc);
 			
-			driver.manage().window().maximize();
+			//driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.get(getDataFromPropertiesFile("config.properties", "appUrl"));
 		
@@ -316,10 +316,10 @@ public class GenericWrappers {
 	 * @param xpathVal  The xpath (locator) of the element to be clicked
 	 * @author David
 	 */
-	public boolean clickByXpath(String xpathVal) {
+	public boolean clickByXpath(WebElement xpathVal) {
 		boolean bReturn = false;
 		try{
-			driver.findElement(By.xpath(xpathVal)).click();
+			xpathVal.click();
 			Reporter.reportStep("The element : "+xpathVal+" is clicked.", "PASS");
 
 			bReturn = true;

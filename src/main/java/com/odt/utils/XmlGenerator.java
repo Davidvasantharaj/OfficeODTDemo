@@ -1,5 +1,7 @@
 package com.odt.utils;
 
+
+
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -128,10 +130,11 @@ public class XmlGenerator extends ApplicationWarppers{
 
 	private static void writeToXML(String xml) {
 		// System.out.println(xml);
-		String path = System.getProperty("user.dir");
+		String currentDir = System.getProperty("user.dir");
 		
+		String path = currentDir + "/testng";
 		System.out.println("Path from writeToXML method : "+path);
-		try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path +"\\.xml"), "utf-8"))) 
+		try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path +".xml"), "utf-8"))) 
 		{
 			writer.write(xml);
 			System.out.println("Write to XML method completed");
@@ -168,6 +171,8 @@ public class XmlGenerator extends ApplicationWarppers{
 				
 				System.out.println("Cell2 value : "+strToRun);
 				if("Run".equalsIgnoreCase(strToRun) || "No".equalsIgnoreCase(strToRun)){
+					
+					System.out.println("inside if");
 					continue;
 				}				
 				Cell cell0 = row.getCell(0);

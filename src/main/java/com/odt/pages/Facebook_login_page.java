@@ -51,12 +51,11 @@ public class Facebook_login_page extends BasePage{
 	}
 
 	
-	public Facebook_login_page clickLogin()
+	public Facebook_SignUp_page clickLogin()
 	{	
 		//sleep(2000);
-		clickById(loginButton);
-		sleep(2000);
-		return this;
+		clickByXpath(loginButton);
+		return new Facebook_SignUp_page();
 	}
 	
 	
